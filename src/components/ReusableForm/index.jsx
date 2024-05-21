@@ -1,4 +1,7 @@
-const ReusableForm = ({ handleSubmit }) => {
+import { useContext } from "react";
+import { Context } from "../../main";
+
+const ReusableForm = ({ handleSubmit, children }) => {
   const handleSubmits = (e) => {
     e.preventDefault();
     const data = {
@@ -8,9 +11,12 @@ const ReusableForm = ({ handleSubmit }) => {
 
     handleSubmit(data);
   };
+
+  const data = useContext(Context);
+  console.log(data);
   return (
     <div>
-      <h1>Sign up</h1>
+      <h1>{children}</h1>
       <form onSubmit={handleSubmits}>
         <input type="text" name="name" />
         <br />

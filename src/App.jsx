@@ -1,8 +1,11 @@
+import { createContext } from "react";
 import "./App.css";
 import Ref from "./components/Ref";
 import ReusableForm from "./components/ReusableForm";
 import HookFrom from "./components/hookFrom";
 import StateFrom from "./components/stateFrom";
+
+
 
 function App() {
   const handleSubmit = (data) => {
@@ -24,7 +27,11 @@ function App() {
       {/* <StateFrom /> */}
       {/* <Ref /> */}
       {/* <HookFrom /> */}
-      <ReusableForm handleSubmit={handleSubmit} />
+      <ReusableForm handleSubmit={handleSubmit}>
+        <div>
+          <h1>sign up for free</h1>
+        </div>
+      </ReusableForm>
     </>
   );
 }
