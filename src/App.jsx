@@ -1,5 +1,6 @@
 import "./App.css";
 import Ref from "./components/Ref";
+import HookFrom from "./components/hookFrom";
 import StateFrom from "./components/stateFrom";
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
      </form> */}
 
       {/* <StateFrom /> */}
-      <Ref />
+      {/* <Ref /> */}
+      <HookFrom />
     </>
   );
 }
